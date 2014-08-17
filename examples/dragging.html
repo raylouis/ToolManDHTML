@@ -42,7 +42,7 @@
 		text-align: left;
 		white-space: normal;
 	}
-	#boxDrag, #boxVerticalOnly, #boxHorizontalOnly, #boxRegionConstraint, 
+	#boxDrag, #boxVerticalOnly, #boxHorizontalOnly, #boxRegionConstraint,
 	#boxThreshold, #boxAbsolute {
 		cursor: move;
 	}
@@ -80,7 +80,7 @@ window.onload = function() {
 	group = drag.createSimpleGroup(boxRegionConstraint)
 	var origin = coordinates.create(0, 0)
 	group.addTransform(function(coordinate, dragEvent) {
-		var originalTopLeftOffset = 
+		var originalTopLeftOffset =
 				dragEvent.topLeftOffset.minus(dragEvent.topLeftPosition)
 		return coordinate.constrainTo(origin, originalTopLeftOffset)
 	})
@@ -103,7 +103,7 @@ window.onload = function() {
 		var clientHeight = coordinates.clientSize().y
 		var boxHeight = coordinates._size(boxAbsolute).y
 		if ((coordinate.y + boxHeight) > (scrollOffset.y + clientHeight))
-			return coordinates.create(coordinate.x, 
+			return coordinates.create(coordinate.x,
 					(scrollOffset.y + clientHeight) - boxHeight)
 
 		return coordinate
@@ -125,7 +125,7 @@ window.onload = function() {
 
 <div class="sidebar">
 	<p><b>Dead Project</b></p>
-	
+
 	<p>ToolManDHTML has been inactive since 2005. It isn't being maintained. I'm leaving the site up for historical purposes and for
 	anyone who still wants access to the examples and source. Thank you to everyone for your interest, compliments and support.
 	(<a href="http://blog.tool-man.org/toolman-dhtml-library-not-supported/19">article</a>)</p>
@@ -133,7 +133,7 @@ window.onload = function() {
 
 <div class="sidebar">
 	<p><b>Download</b></p>
-	
+
 	<p><a href="https://github.com/downloads/toolbear/ToolManDHTML/ToolManDHTML-0.2.zip">Version 0.2</a>&nbsp;&nbsp;(<a href="LICENSE.txt">license</a>)</p>
 </div>
 
@@ -173,15 +173,15 @@ window.onload = function() {
 <div class="sidebar">
 <p>Bizarre bug in firefox.  The short version:
 use a DIV instead of a BR to clear the <code>float: left</code>
-else things won&#8217;t remain as you expect them once you start 
+else things won&#8217;t remain as you expect them once you start
 dragging.</p>
 </div>
 
 
 <div style="clear: left;"><br/></div>
 
-<p style="margin-top: 1em">Nothing novel going on here; just a basic cross-browser 
-dragging library.  Other examples, namely <a href="sorting.html">drag &amp; drop sorting</a>, build 
+<p style="margin-top: 1em">Nothing novel going on here; just a basic cross-browser
+dragging library.  Other examples, namely <a href="sorting.html">drag &amp; drop sorting</a>, build
 upon it.</p>
 
 <p><b>Known Bug</b>: an annoying little IE bug crept into this release.
@@ -191,8 +191,8 @@ the status bar.</p>
 
 <h3 style="margin-top: 3em">TODO</h3>
 <ul>
-	<li><p>FIXME: IE &amp; Firefox, while dragging, if you drag outside 
-	the browser window and then release the mouse button, the mouseup 
+	<li><p>FIXME: IE &amp; Firefox, while dragging, if you drag outside
+	the browser window and then release the mouse button, the mouseup
 	event is lost.  Chaos ensues.</p>
 
 	<p>Of the browsers I've tested, only Safari does the right thing
@@ -218,17 +218,17 @@ the status bar.</p>
 
 	<li><p>demonstrate a constraint shaped like a circle</p></li>
 
-	<li><p>See if it works inside iFrames.  See if it works 
+	<li><p>See if it works inside iFrames.  See if it works
 	inside scrollable elements.</p></li>
 
-	<li><p>While dragging, it should automatically scroll more of the 
+	<li><p>While dragging, it should automatically scroll more of the
 	document into view as you near an edge.</p></li>
 
-	<li><p>deal with absolutely positioned elements that are 
+	<li><p>deal with absolutely positioned elements that are
 	positioned relative to bottom and/or right instead of top and left.
-	Currently, dragging an element "converts" it to a position 
-	relative to the top-left of the window.  This may or may not be 
-	desired.  Example: a vertical drag only element docked to the right 
+	Currently, dragging an element "converts" it to a position
+	relative to the top-left of the window.  This may or may not be
+	desired.  Example: a vertical drag only element docked to the right
 	side of the window loses its <i>dockedness</i> once dragged.</p>
 
 	<p>Workaround: register a listener for 'ondragend' and convert it back

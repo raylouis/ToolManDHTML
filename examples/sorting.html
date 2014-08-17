@@ -136,7 +136,7 @@
 		var id = list.getAttribute("id")
 		if (id == null) return
 		group.register('dragend', function() {
-			ToolMan.cookies().set("list-" + id, 
+			ToolMan.cookies().set("list-" + id,
 					junkdrawer.serializeList(list), 365)
 		})
 	}
@@ -155,7 +155,7 @@
 
 <div class="sidebar">
 	<p><b>Dead Project</b></p>
-	
+
 	<p>ToolManDHTML has been inactive since 2005. It isn't being maintained. I'm leaving the site up for historical purposes and for
 	anyone who still wants access to the examples and source. Thank you to everyone for your interest, compliments and support.
 	(<a href="http://blog.tool-man.org/toolman-dhtml-library-not-supported/19">article</a>)</p>
@@ -163,23 +163,23 @@
 
 <div class="sidebar">
 	<p><b>Download</b></p>
-	
+
 	<p><a href="https://github.com/downloads/toolbear/ToolManDHTML/ToolManDHTML-0.2.zip">Version 0.2</a>&nbsp;&nbsp;(<a href="LICENSE.txt">license</a>)</p>
 </div>
 
-<p>In Web applications I've seen numerous &#8212; and personally implemented 
+<p>In Web applications I've seen numerous &#8212; and personally implemented
 a few &#8212; ways to rearrange items in a list.  All of those were
 indirect interactions typically involving something like up/down arrows next
-to each item.  The most heinous require server roundtrips for each 
+to each item.  The most heinous require server roundtrips for each
 modification...boo.</p>
 
 <p>Then I came across Simon Cozens' example
-of <a href="http://web.archive.org/web/20041010061435/http://blog.simon-cozens.org/6785.html">rearranging a list via 
+of <a href="http://web.archive.org/web/20041010061435/http://blog.simon-cozens.org/6785.html">rearranging a list via
 drag &amp; drop</a>.  I was so inspired I had to try it out myself.</p>
 
 <h2>Example: A Basic List</h2>
 
-<p>Essentially 
+<p>Essentially
 <a href="http://web.archive.org/web/20041010061435/http://blog.simon-cozens.org/6785.html">Simon Cozen's example</a>
 with some subtle enhancements.  It's not obvious, but go ahead and
 <b>rearrange the items</b>:</p>
@@ -198,7 +198,7 @@ button to reveal the serialized version of the associated list.</p>
 <p>In Firefox you can also drag the <i>bullet</i> to move an item.  Keen.</p>
 
 <p><b>Saving the reorderd list</b> is possible by inspecting the DOM.  All
-the sortable lists on this page retain their order via cookies (try 
+the sortable lists on this page retain their order via cookies (try
 rearranging a list and then reloading the page).  Read a
 <a href="http://blog.tool-man.org/saving-a-reordered-list/14">description of the technique</a> on my blog.
 </p>
@@ -213,7 +213,7 @@ margin so a workaround is possible.</p>
 </div>
 
 <p>I added some styling and cursor hinting in an attempt to make
-the dragability more obvious (see 
+the dragability more obvious (see
 <a href="edit-in-place.html">in-place editing</a> for an example
 with drag handles)</a>.</p>
 
@@ -243,14 +243,14 @@ with drag handles)</a>.</p>
 	</tr>
 	<tr>
 		<td class="caption">no margin on list items</td>
-		<td class="caption">4px bottom margin on list items.  Firefox exhibits 
+		<td class="caption">4px bottom margin on list items.  Firefox exhibits
 		bug when dragging.</td>
 		<td class="caption">Firefox workaround: -4px top margin on list, 4px
 		top margin on list items.</td>
 	</tr>
 </table>
 
-<p style="margin-top: 2em">This next list is intentionally long to see how well the technique 
+<p style="margin-top: 2em">This next list is intentionally long to see how well the technique
 scales up and uncover other interaction issues.</p>
 
 <!-- yeah, it's invalid XHTML.  Suck it up, pedant-boy :) -->
@@ -287,8 +287,8 @@ scales up and uncover other interaction issues.</p>
 
 <p>You'll notice if part of this list is below the fold, it requires
 at least 2 drags to move an item from the beginning to the end (technically
-3 drags if you count the one on your browser's scrollbar).  Automatic 
-scrolling, like in Word or Excel, is a well established solution to this 
+3 drags if you count the one on your browser's scrollbar).  Automatic
+scrolling, like in Word or Excel, is a well established solution to this
 problem.  Adding that is a work in progress.</p>
 
 
@@ -297,13 +297,13 @@ problem.  Adding that is a work in progress.</p>
 <div class="sidebar">
 <p>Yet another bizarre bug in firefox.  The short version:
 use a DIV instead of a BR to clear the <code>float: left</code>
-else things won&#8217;t remain as you expect them once you start 
+else things won&#8217;t remain as you expect them once you start
 dragging.</p>
 </div>
 
 <p>With sorting vertically oriented items under our belt, onto
-the next challenge: sorting floated, wrapped list items.  Earlier 
-versions of my code had separate scripts for vertical, horizontal, and 
+the next challenge: sorting floated, wrapped list items.  Earlier
+versions of my code had separate scripts for vertical, horizontal, and
 wrapped lists.  Now they are unified into one script that <i>does it all</i>.
 Amazing!</p>
 
@@ -341,7 +341,7 @@ Amazing!</p>
 <p><input class="inspector" type="button" value="Inspect" onclick="junkdrawer.inspectListOrder('boxes')"/></p>
 
 <p>A previous version determined when to swap based on the position of the
-top-left corner of the item being dragged.  It was this example and the 
+top-left corner of the item being dragged.  It was this example and the
 <a href="edit-in-place.html#slideshow-example">slide arranger</a>
 example which illustrated that the better interaction is to base this on
 the position of the cursor, which is how the script works now.</p>
@@ -372,27 +372,27 @@ button affordances and behavior.  But I think you get the general idea.</p>
 <br/>
 
 <p>Very few people keep the mouse perfectly still when clicking on
-something.  To avoid accidental drags these buttons have a drag 
+something.  To avoid accidental drags these buttons have a drag
 threshold, as do all the examples on this page.</p>
 
 
 <h2>Additional examples</h2>
 
 <ul>
-	<li><p>The editable lists and presentation slide arranger examples on 
-	<a href="edit-in-place.html">in-place editing</a> demonstrate closer to 
+	<li><p>The editable lists and presentation slide arranger examples on
+	<a href="edit-in-place.html">in-place editing</a> demonstrate closer to
 	"real world" usage of this technique.</p></li>
 
 	<li><p>These <a href="toolbars.html">toolbar examples</a>
 	combine sortable buttons and hard core CSS styling to create
 	Windows-like toolbars.</p></li>
 </ul>
-	
+
 <h2>TODO: Example: Drag between two lists</h2>
 
 <p><a href="http://neb.net/nlog/2005/04/14/what-a-drop/">Benjamin Levy</a>
 is credited with the first version (that was based on my code) of
-<a href="http://blog.tool-man.org/drag-between-lists/12">dragging between 
+<a href="http://blog.tool-man.org/drag-between-lists/12">dragging between
 two lists</a>.  Eventually this will be supported in the ToolMan DHTML Library.
 <!--I've shamelessly (and with Benjamin's permission) folded
 his example into my latest version.--></p>
@@ -462,7 +462,7 @@ a pain to use.</p>
 <ul>
 	<li><p>FIXME: given a list of items with no margin, grab the
 	very top edge of an item to drag, drag it to the bottom, keep moving
-	your mouse.  The item will keep swapping with its previous 
+	your mouse.  The item will keep swapping with its previous
 	sibling.</p></li>
 
 	<li><p>FIXME: Firefox, ignore the click after a drag</p></li>

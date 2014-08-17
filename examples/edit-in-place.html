@@ -3,7 +3,7 @@
 <html lang="en-US">
 <head>
 <title>Edit in Place with JavaScript and CSS</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
 <link rel="stylesheet" type="text/css" href="common/common.css"/>
 <link rel="stylesheet" type="text/css" href="common/lists.css"/>
@@ -96,7 +96,7 @@
 
 #listExamples td {
 	width: 9em;
-	margin-right: 20px; 
+	margin-right: 20px;
 	padding: 0px 20px;
 	vertical-align: top;
 }
@@ -288,10 +288,10 @@ function join(name, isDoubleClick) {
 
 		return true
 	}
-	
+
 	view.editor.onkeydown = function(event) {
 		event = fixEvent(event)
-		
+
 		var editor = event.target
 		if (event.keyCode == TAB) {
 			editor.blur()
@@ -341,7 +341,7 @@ function join(name, isDoubleClick) {
 
 <div class="sidebar">
 	<p><b>Dead Project</b></p>
-	
+
 	<p>ToolManDHTML has been inactive since 2005. It isn't being maintained. I'm leaving the site up for historical purposes and for
 	anyone who still wants access to the examples and source. Thank you to everyone for your interest, compliments and support.
 	(<a href="http://blog.tool-man.org/toolman-dhtml-library-not-supported/19">article</a>)</p>
@@ -349,14 +349,14 @@ function join(name, isDoubleClick) {
 
 <div class="sidebar">
 	<p><b>Download</b></p>
-	
+
 	<p><a href="https://github.com/downloads/toolbear/ToolManDHTML/ToolManDHTML-0.2.zip">Version 0.2</a>&nbsp;&nbsp;(<a href="LICENSE.txt">license</a>)</p>
 </div>
 
-<p>Edit in place (also called in-place editing) follows the 
+<p>Edit in place (also called in-place editing) follows the
 axiom Alan Cooper calls "allow input wherever you have output".  The
-combobox &#8211; a form element unfortunately absent from HTML &#8211; 
-demonstrates this.  In the same place where the current selection is 
+combobox &#8211; a form element unfortunately absent from HTML &#8211;
+demonstrates this.  In the same place where the current selection is
 displayed, the user can enter a value directly.</p>
 
 <h2>Editable Content</h2>
@@ -375,7 +375,7 @@ displayed, the user can enter a value directly.</p>
 <div id="markupView">
 <p>Editable #2: This can work on arbitrary markup.  This may or may not be such a good idea.</p>
 
-<p>We can do paragraphs, <b>styling</b>, <a href="./index.html">links</a>, 
+<p>We can do paragraphs, <b>styling</b>, <a href="./index.html">links</a>,
 or any HTML, really.</p>
 
 <table style="text-align: center" cellspacing="0" cellpadding="3">
@@ -408,8 +408,8 @@ or any HTML, really.</p>
 
 <br/>
 
-<p>Without applying some kind of limitation, any markup whatsoever can be 
-entered.  In practice you would normally want to limit the type of markup 
+<p>Without applying some kind of limitation, any markup whatsoever can be
+entered.  In practice you would normally want to limit the type of markup
 allowed perhaps via a <a href="http://tinymce.moxiecode.com/">wysiwyg editor</a>
 or a text formatter like <a href="http://daringfireball.net/projects/markdown/">Markdown</a>.
 </p>
@@ -425,7 +425,7 @@ problem with the sortable links and buttons example in
 <a href="sorting.html">DnD Sortable Lists</a>.</p>
 </div>
 
-<p>Combining in place editing with 
+<p>Combining in place editing with
 <a href="sorting.html">Drag &amp; Drop Sortable Lists</a> results in
 nice direct manipulation for managing a list of labels.</p>
 
@@ -446,8 +446,8 @@ nice direct manipulation for managing a list of labels.</p>
 			</ul>
 		</td>
 		<td>
-			<!-- 
-			IE 5.5+ BugFix: don't put these inside a 
+			<!--
+			IE 5.5+ BugFix: don't put these inside a
 			'position: relative' layer
 			-->
 			<input id="a2Edit" name="a2Edit" class="inplace"/>
@@ -474,8 +474,8 @@ nice direct manipulation for managing a list of labels.</p>
 			</ul>
 		</td>
 		<td>
-			<!-- 
-			IE 5.5+ BugFix: don't put these inside a 
+			<!--
+			IE 5.5+ BugFix: don't put these inside a
 			'position: relative' layer
 			-->
 			<input id="a3Edit" name="a3Edit" class="inplace"/>
@@ -584,7 +584,7 @@ nice direct manipulation for managing a list of labels.</p>
 <!-- surround in table to fix Firefox weirdness -->
 <table><tr><td>
 <div id="slideEditors">
-	<!-- 
+	<!--
 	IE 5.5+ BugFix: don't put these inside a 'position: relative' layer
 	-->
 	<input id="oneEdit" name="oneEdit" class="inplace"/>
@@ -633,8 +633,8 @@ nice direct manipulation for managing a list of labels.</p>
 <ul>
 	<li><p>Safari 1.2: Extra whitespace is introduced by the "Edit Markup" example (resolved in 1.3).</p></li>
 
-	<li><p>Positioning text inputs over labels doesn't work as well in 
-	Safari 1.2 as in Firefox.  Sizing inputs via CSS doesn't work in 
+	<li><p>Positioning text inputs over labels doesn't work as well in
+	Safari 1.2 as in Firefox.  Sizing inputs via CSS doesn't work in
 	Safari 1.2 (resolved in 1.3)</p></li>
 
 	<li><p>Safari 1.2 has issues making the dragged item transparent.
@@ -643,13 +643,13 @@ nice direct manipulation for managing a list of labels.</p>
 	<li><p>Firefox 1.0: you can be editing a label and
 	start a drag without the label reverting back to display.  This is more
 	easily demonstrated on the slideshow example.  A mousedown anywhere
-	outside the text box should cause it to lose focus.  Fixable with 
+	outside the text box should cause it to lose focus.  Fixable with
 	JavaScript</p></li>
 </ul>
 
 <h2>TODO</h2>
 <ul>
-	<li>Try out using createElement instead of including "hidden" input 
+	<li>Try out using createElement instead of including "hidden" input
 	elements in the markup</li>
 </ul>
 
