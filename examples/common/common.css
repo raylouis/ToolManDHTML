@@ -73,6 +73,14 @@ br.clear {
   clear: both;
   margin: 0px;
 }
+#its-dead-tim {
+  font-size: 18px;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #8760c1;
+}
+#its-dead-tim > b {
+  font-weight: bold;
+}
 .sidebar {
   margin: 0px 10px 30px 30px;
   clear: right;
