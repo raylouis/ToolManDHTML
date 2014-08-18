@@ -6,70 +6,70 @@
 <link rel="stylesheet" type="text/css" href="common/common.css"/>
 <link rel="stylesheet" type="text/css" href="common/lists.css"/>
 <style type="text/css"><!--
-	.statusbox {
-		font-size: 13px;
-		font-family: Monaco, monospace;
-		width: 15em;
-	}
-	ul.boxy li { margin: 0px; }
-	#phonetics td {
-		margin: 0px;
-		padding: 0px 1em;
-		vertical-align: top;
-		width: 100px;
-	}
-	#phonetic1 li, #phonetic2 li, #phonetic3 li { margin: 0px; }
-	#phonetic2 li {
-		margin-bottom: 4px;
-	}
-	#phonetic3 { margin-top: -4px; }
-	#phonetic3 li { margin-top: 4px; }
-	#phoneticlong {
-		margin-bottom: 1em;
-	}
-	#phoneticlong li, #buttons li {
-		margin-bottom: 0px;
-		margin-top: 4px;
-	}
+  .statusbox {
+    font-size: 13px;
+    font-family: Monaco, monospace;
+    width: 15em;
+  }
+  ul.boxy li { margin: 0px; }
+  #phonetics td {
+    margin: 0px;
+    padding: 0px 1em;
+    vertical-align: top;
+    width: 100px;
+  }
+  #phonetic1 li, #phonetic2 li, #phonetic3 li { margin: 0px; }
+  #phonetic2 li {
+    margin-bottom: 4px;
+  }
+  #phonetic3 { margin-top: -4px; }
+  #phonetic3 li { margin-top: 4px; }
+  #phoneticlong {
+    margin-bottom: 1em;
+  }
+  #phoneticlong li, #buttons li {
+    margin-bottom: 0px;
+    margin-top: 4px;
+  }
 
-	#boxes {
-		font-family: Arial, sans-serif;
-		list-style-type: none;
-		margin: 0px;
-		padding: 0px;
-		width: 300px;
-	}
-	#boxes li {
-		cursor: move;
-		position: relative;
-		float: left;
-		margin: 2px 2px 0px 0px;
-		width: 33px;
-		height: 28px;
-		border: 1px solid #000;
-		text-align: center;
-		padding-top: 5px;
-		background-color: #eeeeff;
-	}
+  #boxes {
+    font-family: Arial, sans-serif;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 300px;
+  }
+  #boxes li {
+    cursor: move;
+    position: relative;
+    float: left;
+    margin: 2px 2px 0px 0px;
+    width: 33px;
+    height: 28px;
+    border: 1px solid #000;
+    text-align: center;
+    padding-top: 5px;
+    background-color: #eeeeff;
+  }
 
-	#twolists td {
-		width: 300px;
-		vertical-align: top;
-	}
-	#twolists1 li {
-		font-family: sans-serif;
-	}
-	#twolists2 {
-		border: 1px dashed #fff;
-	}
-	#twolists2 li {
-		font-family: serif;
-		background-color: #eedddd;
-	}
-	.inspector {
-		font-size: 11px;
-	}
-	//-->
+  #twolists td {
+    width: 300px;
+    vertical-align: top;
+  }
+  #twolists1 li {
+    font-family: sans-serif;
+  }
+  #twolists2 {
+    border: 1px dashed #fff;
+  }
+  #twolists2 li {
+    font-family: serif;
+    background-color: #eedddd;
+  }
+  .inspector {
+    font-size: 11px;
+  }
+  //-->
 </style>
 
 <script language="JavaScript" type="text/javascript" src="../source/org/tool-man/core.js"></script>
@@ -81,90 +81,90 @@
 <script language="JavaScript" type="text/javascript" src="../source/org/tool-man/cookies.js"></script>
 
 <script language="JavaScript" type="text/javascript"><!--
-	var dragsort = ToolMan.dragsort()
-	var junkdrawer = ToolMan.junkdrawer()
+  var dragsort = ToolMan.dragsort()
+  var junkdrawer = ToolMan.junkdrawer()
 
-	window.onload = function() {
-		junkdrawer.restoreListOrder("numeric")
-		junkdrawer.restoreListOrder("phonetic1")
-		junkdrawer.restoreListOrder("phonetic2")
-		junkdrawer.restoreListOrder("phonetic3")
-		junkdrawer.restoreListOrder("phoneticlong")
-		junkdrawer.restoreListOrder("boxes")
-		junkdrawer.restoreListOrder("buttons")
-		//junkdrawer.restoreListOrder("twolists1")
-		//junkdrawer.restoreListOrder("twolists2")
+  window.onload = function() {
+    junkdrawer.restoreListOrder("numeric")
+    junkdrawer.restoreListOrder("phonetic1")
+    junkdrawer.restoreListOrder("phonetic2")
+    junkdrawer.restoreListOrder("phonetic3")
+    junkdrawer.restoreListOrder("phoneticlong")
+    junkdrawer.restoreListOrder("boxes")
+    junkdrawer.restoreListOrder("buttons")
+    //junkdrawer.restoreListOrder("twolists1")
+    //junkdrawer.restoreListOrder("twolists2")
 
-		dragsort.makeListSortable(document.getElementById("numeric"),
-				verticalOnly, saveOrder)
+    dragsort.makeListSortable(document.getElementById("numeric"),
+        verticalOnly, saveOrder)
 
-		dragsort.makeListSortable(document.getElementById("phonetic1"),
-				verticalOnly, saveOrder)
-		dragsort.makeListSortable(document.getElementById("phonetic2"),
-				verticalOnly, saveOrder)
-		dragsort.makeListSortable(document.getElementById("phonetic3"),
-				verticalOnly, saveOrder)
-		dragsort.makeListSortable(document.getElementById("phoneticlong"),
-				verticalOnly, saveOrder)
+    dragsort.makeListSortable(document.getElementById("phonetic1"),
+        verticalOnly, saveOrder)
+    dragsort.makeListSortable(document.getElementById("phonetic2"),
+        verticalOnly, saveOrder)
+    dragsort.makeListSortable(document.getElementById("phonetic3"),
+        verticalOnly, saveOrder)
+    dragsort.makeListSortable(document.getElementById("phoneticlong"),
+        verticalOnly, saveOrder)
 
-		dragsort.makeListSortable(document.getElementById("boxes"),
-				saveOrder)
+    dragsort.makeListSortable(document.getElementById("boxes"),
+        saveOrder)
 
-		dragsort.makeListSortable(document.getElementById("buttons"),
-				saveOrder)
+    dragsort.makeListSortable(document.getElementById("buttons"),
+        saveOrder)
 
-		/*
-		dragsort.makeListSortable(document.getElementById("twolists1"),
-				saveOrder)
-		dragsort.makeListSortable(document.getElementById("twolists2"),
-				saveOrder)
-		*/
-	}
+    /*
+    dragsort.makeListSortable(document.getElementById("twolists1"),
+        saveOrder)
+    dragsort.makeListSortable(document.getElementById("twolists2"),
+        saveOrder)
+    */
+  }
 
-	function verticalOnly(item) {
-		item.toolManDragGroup.verticalOnly()
-	}
+  function verticalOnly(item) {
+    item.toolManDragGroup.verticalOnly()
+  }
 
-	function speak(id, what) {
-		var element = document.getElementById(id);
-		element.innerHTML = 'Clicked ' + what;
-	}
+  function speak(id, what) {
+    var element = document.getElementById(id);
+    element.innerHTML = 'Clicked ' + what;
+  }
 
-	function saveOrder(item) {
-		var group = item.toolManDragGroup
-		var list = group.element.parentNode
-		var id = list.getAttribute("id")
-		if (id == null) return
-		group.register('dragend', function() {
-			ToolMan.cookies().set("list-" + id,
-					junkdrawer.serializeList(list), 365)
-		})
-	}
+  function saveOrder(item) {
+    var group = item.toolManDragGroup
+    var list = group.element.parentNode
+    var id = list.getAttribute("id")
+    if (id == null) return
+    group.register('dragend', function() {
+      ToolMan.cookies().set("list-" + id,
+          junkdrawer.serializeList(list), 365)
+    })
+  }
 
-	//-->
+  //-->
 </script>
 </head>
 <body>
 
 <h1>Drag &amp; Drop Sortable Lists with JavaScript and CSS</h1>
 <ul class="breadcrumb">
-	<li class="first"><a href="http://tool-man.org/">Home</a></li>
-	<li><a href="./index.html">Other Examples</a></li>
+  <li class="first"><a href="http://tool-man.org/">Home</a></li>
+  <li><a href="./index.html">Other Examples</a></li>
 </ul>
 <br class="clear"/>
 
 <div class="sidebar">
-	<p><b>Dead Project</b></p>
+  <p><b>Dead Project</b></p>
 
-	<p>ToolManDHTML has been inactive since 2005. It isn't being maintained. I'm leaving the site up for historical purposes and for
-	anyone who still wants access to the examples and source. Thank you to everyone for your interest, compliments and support.
-	(<a href="http://blog.tool-man.org/toolman-dhtml-library-not-supported/19">article</a>)</p>
+  <p>ToolManDHTML has been inactive since 2005. It isn't being maintained. I'm leaving the site up for historical purposes and for
+  anyone who still wants access to the examples and source. Thank you to everyone for your interest, compliments and support.
+  (<a href="http://blog.tool-man.org/toolman-dhtml-library-not-supported/19">article</a>)</p>
 </div>
 
 <div class="sidebar">
-	<p><b>Download</b></p>
+  <p><b>Download</b></p>
 
-	<p><a href="https://github.com/downloads/toolbear/ToolManDHTML/ToolManDHTML-0.2.zip">Version 0.2</a>&nbsp;&nbsp;(<a href="LICENSE.txt">license</a>)</p>
+  <p><a href="https://github.com/downloads/toolbear/ToolManDHTML/ToolManDHTML-0.2.zip">Version 0.2</a>&nbsp;&nbsp;(<a href="LICENSE.txt">license</a>)</p>
 </div>
 
 <p>In Web applications I've seen numerous &#8212; and personally implemented
@@ -185,9 +185,9 @@ with some subtle enhancements.  It's not obvious, but go ahead and
 <b>rearrange the items</b>:</p>
 
 <ul id="numeric">
-	<li itemID="1">one</li>
-	<li itemID="2">two</li>
-	<li itemID="3">three</li>
+  <li itemID="1">one</li>
+  <li itemID="2">two</li>
+  <li itemID="3">three</li>
 </ul>
 
 <div class="sidebar">
@@ -218,36 +218,36 @@ the dragability more obvious (see
 with drag handles)</a>.</p>
 
 <table id="phonetics">
-	<tr>
-		<td>
-			<ul id="phonetic1" class="boxy">
-				<li>alpha</li>
-				<li>bravo</li>
-				<li>charlie</li>
-			</ul>
-		</td>
-		<td>
-			<ul id="phonetic2" class="boxy">
-				<li>alpha</li>
-				<li>bravo</li>
-				<li>charlie</li>
-			</ul>
-		</td>
-		<td>
-			<ul id="phonetic3" class="boxy">
-				<li>alpha</li>
-				<li>bravo</li>
-				<li>charlie</li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td class="caption">no margin on list items</td>
-		<td class="caption">4px bottom margin on list items.  Firefox exhibits
-		bug when dragging.</td>
-		<td class="caption">Firefox workaround: -4px top margin on list, 4px
-		top margin on list items.</td>
-	</tr>
+  <tr>
+    <td>
+      <ul id="phonetic1" class="boxy">
+        <li>alpha</li>
+        <li>bravo</li>
+        <li>charlie</li>
+      </ul>
+    </td>
+    <td>
+      <ul id="phonetic2" class="boxy">
+        <li>alpha</li>
+        <li>bravo</li>
+        <li>charlie</li>
+      </ul>
+    </td>
+    <td>
+      <ul id="phonetic3" class="boxy">
+        <li>alpha</li>
+        <li>bravo</li>
+        <li>charlie</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="caption">no margin on list items</td>
+    <td class="caption">4px bottom margin on list items.  Firefox exhibits
+    bug when dragging.</td>
+    <td class="caption">Firefox workaround: -4px top margin on list, 4px
+    top margin on list items.</td>
+  </tr>
 </table>
 
 <p style="margin-top: 2em">This next list is intentionally long to see how well the technique
@@ -255,32 +255,32 @@ scales up and uncover other interaction issues.</p>
 
 <!-- yeah, it's invalid XHTML.  Suck it up, pedant-boy :) -->
 <ul id="phoneticlong" class="boxy">
-	<li itemID="a">alpha</li>
-	<li itemID="b">bravo</li>
-	<li itemID="c">charlie</li>
-	<li itemID="d">delta</li>
-	<li itemID="e">echo</li>
-	<li itemID="f">foxtrot</li>
-	<li itemID="g">golf</li>
-	<li itemID="h">hotel</li>
-	<li itemID="i">india</li>
-	<li itemID="j">juliet</li>
-	<li itemID="k">kilo</li>
-	<li itemID="l">lima</li>
-	<li itemID="m">mike</li>
-	<li itemID="n">november</li>
-	<li itemID="o">oscar</li>
-	<li itemID="p">papa</li>
-	<li itemID="q">quebec</li>
-	<li itemID="r">romeo</li>
-	<li itemID="s">sierra</li>
-	<li itemID="t">tango</li>
-	<li itemID="u">uniform</li>
-	<li itemID="v">victor</li>
-	<li itemID="w">whiskey</li>
-	<li itemID="x">xray</li>
-	<li itemID="y">yankee</li>
-	<li itemID="z">zulu</li>
+  <li itemID="a">alpha</li>
+  <li itemID="b">bravo</li>
+  <li itemID="c">charlie</li>
+  <li itemID="d">delta</li>
+  <li itemID="e">echo</li>
+  <li itemID="f">foxtrot</li>
+  <li itemID="g">golf</li>
+  <li itemID="h">hotel</li>
+  <li itemID="i">india</li>
+  <li itemID="j">juliet</li>
+  <li itemID="k">kilo</li>
+  <li itemID="l">lima</li>
+  <li itemID="m">mike</li>
+  <li itemID="n">november</li>
+  <li itemID="o">oscar</li>
+  <li itemID="p">papa</li>
+  <li itemID="q">quebec</li>
+  <li itemID="r">romeo</li>
+  <li itemID="s">sierra</li>
+  <li itemID="t">tango</li>
+  <li itemID="u">uniform</li>
+  <li itemID="v">victor</li>
+  <li itemID="w">whiskey</li>
+  <li itemID="x">xray</li>
+  <li itemID="y">yankee</li>
+  <li itemID="z">zulu</li>
 </ul>
 
 <p><input class="inspector" type="button" value="Inspect" onclick="junkdrawer.inspectListOrder('phoneticlong')"/></p>
@@ -308,32 +308,32 @@ wrapped lists.  Now they are unified into one script that <i>does it all</i>.
 Amazing!</p>
 
 <ul id="boxes">
-	<li class="box">A</li>
-	<li class="box">B</li>
-	<li class="box">C</li>
-	<li class="box">D</li>
-	<li class="box">E</li>
-	<li class="box">F</li>
-	<li class="box">G</li>
-	<li class="box">H</li>
-	<li class="box">I</li>
-	<li class="box">J</li>
-	<li class="box">K</li>
-	<li class="box">L</li>
-	<li class="box">M</li>
-	<li class="box">N</li>
-	<li class="box">O</li>
-	<li class="box">P</li>
-	<li class="box">Q</li>
-	<li class="box">R</li>
-	<li class="box">S</li>
-	<li class="box">T</li>
-	<li class="box">U</li>
-	<li class="box">V</li>
-	<li class="box">W</li>
-	<li class="box">X</li>
-	<li class="box">Y</li>
-	<li class="box">Z</li>
+  <li class="box">A</li>
+  <li class="box">B</li>
+  <li class="box">C</li>
+  <li class="box">D</li>
+  <li class="box">E</li>
+  <li class="box">F</li>
+  <li class="box">G</li>
+  <li class="box">H</li>
+  <li class="box">I</li>
+  <li class="box">J</li>
+  <li class="box">K</li>
+  <li class="box">L</li>
+  <li class="box">M</li>
+  <li class="box">N</li>
+  <li class="box">O</li>
+  <li class="box">P</li>
+  <li class="box">Q</li>
+  <li class="box">R</li>
+  <li class="box">S</li>
+  <li class="box">T</li>
+  <li class="box">U</li>
+  <li class="box">V</li>
+  <li class="box">W</li>
+  <li class="box">X</li>
+  <li class="box">Y</li>
+  <li class="box">Z</li>
 </ul>
 
 <div style="clear: left;"><br/></div>
@@ -364,10 +364,10 @@ button affordances and behavior.  But I think you get the general idea.</p>
 
 <div id="buttonsStatus" class="statusbox" style="position: relative; left: 11em">&nbsp;</div>
 <ul id="buttons" class="sortable boxy clickable">
-	<li itemID="Save"><a href="#" onclick="speak('buttonsStatus', this.innerHTML); return false;">Save</a></li>
-	<li itemID="Cancel"><a href="#" onclick="speak('buttonsStatus', this.innerHTML); return false;">Cancel</a></li>
-	<li itemID="Preview"><a href="#" onclick="speak('buttonsStatus', this.innerHTML); return false;">Preview</a></li>
-	<li itemID="Print"><a href="#" onclick="speak('buttonsStatus', this.innerHTML); return false;">Print</a></li>
+  <li itemID="Save"><a href="#" onclick="speak('buttonsStatus', this.innerHTML); return false;">Save</a></li>
+  <li itemID="Cancel"><a href="#" onclick="speak('buttonsStatus', this.innerHTML); return false;">Cancel</a></li>
+  <li itemID="Preview"><a href="#" onclick="speak('buttonsStatus', this.innerHTML); return false;">Preview</a></li>
+  <li itemID="Print"><a href="#" onclick="speak('buttonsStatus', this.innerHTML); return false;">Print</a></li>
 </ul>
 <br/>
 
@@ -379,13 +379,13 @@ threshold, as do all the examples on this page.</p>
 <h2>Additional examples</h2>
 
 <ul>
-	<li><p>The editable lists and presentation slide arranger examples on
-	<a href="edit-in-place.html">in-place editing</a> demonstrate closer to
-	"real world" usage of this technique.</p></li>
+  <li><p>The editable lists and presentation slide arranger examples on
+  <a href="edit-in-place.html">in-place editing</a> demonstrate closer to
+  "real world" usage of this technique.</p></li>
 
-	<li><p>These <a href="toolbars.html">toolbar examples</a>
-	combine sortable buttons and hard core CSS styling to create
-	Windows-like toolbars.</p></li>
+  <li><p>These <a href="toolbars.html">toolbar examples</a>
+  combine sortable buttons and hard core CSS styling to create
+  Windows-like toolbars.</p></li>
 </ul>
 
 <h2>TODO: Example: Drag between two lists</h2>
@@ -401,22 +401,22 @@ his example into my latest version.--></p>
 <p><b>Note: this doesn't work yet.</b></p>
 
 <table id="twolists">
-	<tr>
-		<td>
-			<ul id="twolists1" class="boxy">
-				<li>alpha</li>
-				<li>bravo</li>
-				<li>charlie</li>
-			</ul>
-		</td>
-		<td>
-			<ul id="twolists2" class="boxy">
-				<li>one</li>
-				<li>two</li>
-				<li>three</li>
-			</ul>
-		</td>
-	</tr>
+  <tr>
+    <td>
+      <ul id="twolists1" class="boxy">
+        <li>alpha</li>
+        <li>bravo</li>
+        <li>charlie</li>
+      </ul>
+    </td>
+    <td>
+      <ul id="twolists2" class="boxy">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
 <p>Desired interactions:</p>
@@ -460,17 +460,17 @@ a pain to use.</p>
 <h2>TODO</h2>
 
 <ul>
-	<li><p>FIXME: given a list of items with no margin, grab the
-	very top edge of an item to drag, drag it to the bottom, keep moving
-	your mouse.  The item will keep swapping with its previous
-	sibling.</p></li>
+  <li><p>FIXME: given a list of items with no margin, grab the
+  very top edge of an item to drag, drag it to the bottom, keep moving
+  your mouse.  The item will keep swapping with its previous
+  sibling.</p></li>
 
-	<li><p>FIXME: Firefox, ignore the click after a drag</p></li>
+  <li><p>FIXME: Firefox, ignore the click after a drag</p></li>
 </ul>
 
 <ul class="breadcrumb">
-	<li class="first"><a href="http://tool-man.org/">Home</a></li>
-	<li><a href="./index.html">Other Examples</a></li>
+  <li class="first"><a href="http://tool-man.org/">Home</a></li>
+  <li><a href="./index.html">Other Examples</a></li>
 </ul>
 
 <div id="copyright">Copyright &copy; 2005 Tim Taylor Consulting
@@ -482,8 +482,8 @@ document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.
 </script>
 <script type="text/javascript">
 try {
-	var pageTracker = _gat._getTracker("UA-5938291-1");
-	pageTracker._trackPageview();
+  var pageTracker = _gat._getTracker("UA-5938291-1");
+  pageTracker._trackPageview();
 } catch(err) {}</script>
 
 </body>
