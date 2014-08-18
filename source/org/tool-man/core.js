@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2005 Tim Taylor Consulting <http://tool-man.org/>
+Copyright (c) 2005 Tim Taylor <http://tool-man.org/>
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),
